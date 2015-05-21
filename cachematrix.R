@@ -8,10 +8,11 @@
 
 ## Write a short comment describing this function
 
-### It has 3 methods
+### It has 4 methods
 ###  set = takes a regular matrix as a parameters and stores it
 ###  get = which returns the regular matrix 
-### 
+###  getCachedInverseMatrix = gets the cached inverse matrix
+###  setCachedInverseMatrix which sets the cached inverse matrix
 ### if function is called without a parameter this function creates a default one
 ### 
 ### Assumptions 
