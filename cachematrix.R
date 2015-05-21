@@ -3,11 +3,6 @@
 ### in order to get a special cache matrix you can call by makeCacheMatrix()
 ## cacheSolve function computes the inverse of the special "matrix" returned by makeCacheMatrix above. 
 
-
-
-
-## Write a short comment describing this function
-
 ### It has 4 methods
 ###  set = takes a regular matrix as a parameters and stores it
 ###  get = which returns the regular matrix 
