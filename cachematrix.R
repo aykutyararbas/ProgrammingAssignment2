@@ -3,12 +3,7 @@
 ### in order to get a special cache matrix you can call by makeCacheMatrix()
 ## cacheSolve function computes the inverse of the special "matrix" returned by makeCacheMatrix above. 
 
-
-
-
-## Write a short comment describing this function
-
-### It has 4 methods
+### It creates an list with 4 methods 
 ###  set = takes a regular matrix as a parameters and stores it
 ###  get = which returns the regular matrix 
 ###  getCachedInverseMatrix = gets the cached inverse matrix
@@ -20,20 +15,19 @@
 makeCacheMatrix <- function(x = matrix()) {
         ## Create cached inverse
         cachedInverseMatrix <- NULL 
-        ##Create determinant so that it can check if matrix is changed
-        detOfMatrix<- NULL
         ##Set function
         set<-function(y){
-          x<<-y
-          dety<-det(y)
-          if(!is.null(cachedInverseMatrix) == TRUE){
-            ## New data is set we need to update cache
-            message("Updating cache")
-            setCachedInverseMatrix(solve(y))
+          if(!is.null(cachedInverseMatrix)){
+            ##Check if the new values are not equal then set cache with the inverse of new values
+            if(dim(get())==dim(y)&&all(get() == y)){
+              message("New values are equal")
+            } else {
+              setCachedInverseMatrix(solve(y));
+            }
           } else {
-            cachedInverseMatrix <- NULL 
+            cachedInverseMatrix <- NULL             
           }
-          detOfMatrix<-dety
+          x<<-y
         }
         ##Get data for the original matrix
         get<-function() x
